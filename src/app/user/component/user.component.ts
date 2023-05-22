@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { User } from '../../shared/model/user';
+import { UserService } from '../service/user.service';
 
 @Component({
   selector: 'app-user',
@@ -8,29 +9,12 @@ import { User } from '../../shared/model/user';
   styleUrls: ['./user.component.scss'],
 })
 export class UserComponent implements OnInit {
-  users: User[] = [
-    {
-      id: '1',
-      name: 'Anderson',
-      email: 'anderson@email.com',
-      createdAt: new Date(),
-    },
-    {
-      id: '2',
-      name: 'AHelena',
-      email: 'helena@email.com',
-      createdAt: new Date(),
-    },
-    {
-      id: '3',
-      name: 'Elaine',
-      email: 'elaine@email.com',
-      createdAt: new Date(),
-    },
-  ];
+  users: User[] = [];
   displayedColumns = ['name', 'email', 'createdAt'];
 
-  constructor() {}
+  constructor(private userService: UserService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.users = this.userService.finAll();
+  }
 }
