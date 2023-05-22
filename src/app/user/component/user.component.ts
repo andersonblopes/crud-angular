@@ -3,11 +3,11 @@ import { Component, OnInit } from '@angular/core';
 import { User } from '../../shared/model/user';
 
 @Component({
-  selector: 'app-users',
-  templateUrl: './users.component.html',
-  styleUrls: ['./users.component.scss'],
+  selector: 'app-user',
+  templateUrl: './user.component.html',
+  styleUrls: ['./user.component.scss'],
 })
-export class UsersComponent implements OnInit {
+export class UserComponent implements OnInit {
   users: User[] = [
     {
       id: '1',
