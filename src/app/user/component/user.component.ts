@@ -10,14 +10,12 @@ import { Observable } from 'rxjs';
   styleUrls: ['./user.component.scss'],
 })
 export class UserComponent implements OnInit {
-  users: Observable<User[]>;
+  users$: Observable<User[]>;
   displayedColumns = ['name', 'email', 'createdAt'];
 
   constructor(private userService: UserService) {
-    this.users = this.userService.finAll();
+    this.users$ = this.userService.finAll();
   }
 
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void {}
 }
