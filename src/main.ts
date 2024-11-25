@@ -13,7 +13,8 @@ bootstrapApplication(AppComponent, {
     importProvidersFrom(BrowserModule, CommonModule),
     provideAnimations(),
     provideHttpClient(withInterceptorsFromDi()),
-    provideRouter(APP_ROUTES, withPreloading(PreloadAllModules))
-  ]
+    provideRouter(APP_ROUTES, withPreloading(PreloadAllModules)),
+    provideAnimations()
+]
 })
   .catch(err => console.error(err));
