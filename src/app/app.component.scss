@@ -1,0 +1,81 @@
+/* Global layout styles */
+html,
+body,
+app-root {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Toolbar styles */
+mat-toolbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.app-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.spacer {
+  flex: 1; /* Fills remaining space in toolbar */
+}
+
+/* Main container layout */
+.main-container {
+  margin-top: 64px; /* Space for fixed toolbar */
+  flex-grow: 1; /* Fills remaining vertical space */
+  display: flex;
+  flex-direction: column;
+  background-color: #fafafa; /* Light background for the main content */
+}
+
+/* Welcome section styles */
+.welcome-section {
+  padding: 32px;
+  text-align: center;
+  background-color: #f5f5f5; /* Light gray background */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0; /* Prevents shrinking */
+}
+
+.welcome-section h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.welcome-section p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Router outlet styles */
+router-outlet {
+  flex-grow: 1; /* Fills remaining space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  background-color: #ffffff; /* White background for routed content */
+}
+
+/* Styles for language switch icons and buttons */
+button[mat-button] {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space between the icon and text */
+  font-size: 0.9rem;
+  text-transform: uppercase; /* Consistent capitalization */
+}
+
+span.fi {
+  display: inline-block;
+  width: 1.2rem; /* Icon size */
+  height: auto;
+  margin-right: 4px; /* Spacing between icon and text */
+}

@@ -10,13 +10,14 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatCardModule} from "@angular/material/card";
 import {MatTableModule} from "@angular/material/table";
 import {CommonModule} from "@angular/common";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.scss'],
   standalone: true,
-  imports: [CommonModule, MatDialogModule, MatProgressSpinnerModule, MatToolbarModule, MatCardModule, MatTableModule],
+  imports: [CommonModule, TranslateModule, MatDialogModule, MatProgressSpinnerModule, MatToolbarModule, MatCardModule, MatTableModule],
 })
 export class UserComponent {
   users$: Observable<User[]>;

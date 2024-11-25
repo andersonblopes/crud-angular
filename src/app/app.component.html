@@ -1,5 +1,24 @@
 <mat-toolbar color="primary">
-  <span>Lopes System</span>
+  <mat-toolbar-row>
+    <div class="app-title">My APP</div>
+    <div class="spacer"></div>
+    <!-- Language Switch Buttons -->
+    <button mat-button aria-label="Switch to English" (click)="switchLanguage('en')">
+      <span class="fi fi-gb"></span> EN
+    </button>
+    <button mat-button aria-label="Switch to French" (click)="switchLanguage('fr')">
+      <span class="fi fi-fr"></span> FR
+    </button>
+    <button mat-button aria-label="Switch to Portuguese" (click)="switchLanguage('pt')">
+      <span class="fi fi-pt"></span> PT
+    </button>
+  </mat-toolbar-row>
 </mat-toolbar>
 
-<router-outlet></router-outlet>
+<main class="main-container">
+  <section class="welcome-section">
+    <h1>{{ 'HELLO' | translate }}</h1>
+    <p [innerHTML]="'WELCOME' | translate: { link: sanitizedLink }"></p>
+  </section>
+  <router-outlet></router-outlet>
+</main>

@@ -1,0 +1,8 @@
+{
+  "HELLO": "Bonjour",
+  "WELCOME": "Bienvenue dans notre application!<br>Pour plus de détails, cliquez <a href='{{link}}' target='_blank'>ici</a>.",
+  "USERS": "Utilisateurs",
+  "NAME": "Nom",
+  "EMAIL": "E-mail",
+  "CREATED_AT": "Créé le"
+}
