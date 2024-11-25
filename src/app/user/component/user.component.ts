@@ -1,15 +1,22 @@
-import { Component } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
-import { catchError, Observable, of } from 'rxjs';
+import {Component} from '@angular/core';
+import {MatDialog, MatDialogModule} from '@angular/material/dialog';
+import {catchError, Observable, of} from 'rxjs';
 
-import { User } from '../../shared/model/user';
-import { UserService } from '../service/user.service';
-import { ErrorDialogComponent } from 'src/app/shared/componenets/error-dialog/error-dialog.component';
+import {User} from '../../shared/model/user';
+import {UserService} from '../service/user.service';
+import {ErrorDialogComponent} from 'src/app/shared/componenets/error-dialog/error-dialog.component';
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {MatCardModule} from "@angular/material/card";
+import {MatTableModule} from "@angular/material/table";
+import {CommonModule} from "@angular/common";
 
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.scss'],
+  standalone: true,
+  imports: [CommonModule, MatDialogModule, MatProgressSpinnerModule, MatToolbarModule, MatCardModule, MatTableModule],
 })
 export class UserComponent {
   users$: Observable<User[]>;
